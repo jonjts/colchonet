@@ -1,5 +1,60 @@
 @import "shadow";
 
+.review label i.fa {
+	font-size: 18px;
+	text-shadow: 1px 1px #999;
+	cursor:pointer;
+	color: #ccc;
+}
+.review label.toggled i {
+	color: gold;
+}
+
+.review form > input {
+	display:none;
+}
+
+.review .fa-check,
+.review .fa-times {
+	position: absolute;
+	right: 0;
+}
+
+.review .star{
+	font-size: 18px;
+}
+
+.review .fa-star {
+	color: gold;
+	text-shadow: 1px 1px #999;
+}
+.review .fa-star-o {
+	color: #aaa;
+}
+
+#content .review form {
+	margin: 0;
+}
+
+#content .review {
+	margin: 0;
+	padding: 0;
+	float: right;
+	border: none;
+/* Adicione a seguinte linha: */
+position: relative;
+}
+
+.review label {
+	display: inline;
+}
+
+.review .login_required {
+	font-size: 0.8em;
+	color: #666;
+	font-variant: small-caps;
+}
+
 .room {
 	background-color: white;
 	padding: 20px 25px;

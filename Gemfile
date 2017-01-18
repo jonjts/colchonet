@@ -6,21 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 
- gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 
 ##########
-#gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
-#if Bundler::WINDOWS
- #gem 'bcrypt-ruby', '~> 3.1.2', platforms: :x64_mingw ,require: false
-#else
-#  gem 'bcrypt', '~> 3.1.10', require: false
-#end
-######
-#gem 'bcrypt-ruby', '~> 3.1.5'
-#gem 'bcrypt-ruby', '~> 3.1.15',  platforms: :x64_mingw 
-#gem 'bcrypt', '~> 3.1.11'
-# gem 'bcrypt', '~> 3.0.0', platforms: :x64_mingw, :require => true
- #gem 'bcrypt', platforms: :ruby, :require => true
+gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record

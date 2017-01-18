@@ -3,6 +3,7 @@ class User < ApplicationRecord
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
 	has_many :rooms
+	has_many :reviews, dependent: :destroy
 
 	scope :confirmed, -> {where.not(confirmed_at: nil)}
 

@@ -6,12 +6,18 @@ class RoomsController < ApplicationController
   # GET /rooms
   # GET /rooms.json
   def index
-    @rooms = Room.all
+    @rooms = Room.most_recent.map do |room|
+      RoomPresenter.new(room, self, false)
   end
 
   # GET /rooms/1
   # GET /rooms/1.json
   def show
+    if user_signed_in?
+      @user_review = @roo.reviews.
+      find_or_initialize_by(user_id: current_user.id)
+    end      
+    end
   end
 
   # GET /rooms/new
@@ -64,7 +70,8 @@ class RoomsController < ApplicationController
   end
 
   def set_users_room
-    @room = current_user.rooms.find(params[:id])
+    room_model = Room.find(params[:id])
+    @room = RoomPresenter.new(room_model, self)
   end
 
   private
