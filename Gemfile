@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'bcrypt', '~> 3.1', '>= 3.1.11'
+gem 'bcrypt-ruby', '3.1.5', :require => 'bcrypt'
 
 ##########
 gem 'font-awesome-rails'
